@@ -1670,7 +1670,7 @@ screen and (min-width:48.0625em) {
         display: block;
         width: 50%;
         margin-right: 0;
-        margin-left: 0
+        margin-left: 0;
     }
 }
 
@@ -1768,7 +1768,7 @@ screen and (min-width:48.0625em) {
 .photo__divider-bottom {
     display: none;
     width: 100%;
-    margin: 15vh 0
+    margin: 20vh 0
 }
 
 @media print,
@@ -1780,9 +1780,54 @@ screen and (min-width:48.0625em) {
     }
 }
 
+.photo__text {
+    position: relative;
+    pointer-events: none;
+    user-select: none
+}
+
+@media print,
+screen and (min-width:64em) {
+    .photo__text {
+        max-width: 830px;
+        padding: 40px;
+        margin: 0 auto
+    }
+}
+
+@media print,
+screen and (max-width:48.0625em) {
+    .photo__text {
+        display: none
+    }
+}
+
+.photo__text,
+.photo__text p {
+    width: 100%;
+    text-align: left;
+    font-size: 12px;
+    line-height: 24px;
+    color: #999
+}
+
+.photo__text br,
+.photo__text p br {
+    display: none
+}
+
+@media print,
+screen and (min-width:64em) {
+
+    .photo__text br,
+    .photo__text p br {
+        display: block
+    }
+}
+
 .photo__single {
     position: relative;
-    padding: 20px 0
+    padding: 15px 0
 }
 
 @media print,
@@ -1872,18 +1917,14 @@ screen and (min-width:28.6875em) {
 @media print,
 screen and (min-width:48.0625em) {
     .photo__single.r0 {
-        text-align: right
+        text-align: right;
     }
     .photo__single.r1 {
         text-align: right;
         right: 10%
     }
-}
-
-@media print,
-screen and (min-width:48.0625em) {
     .photo__single.l0 {
-        text-align: left
+        text-align: left;
     }
     .photo__single.l1 {
         text-align: left;
@@ -1894,14 +1935,14 @@ screen and (min-width:48.0625em) {
 @media print,
 screen and (min-width:28.6875em) {
     .photo__single.square .photo__single-image {
-        width: 45%;
+        width: 75%;
     }
 }
 
 @media print,
 screen and (min-width:48.0625em) {
     .photo__single.square .photo__single-image {
-        width: 35%;
+        width: 45%;
     }
 }
 
@@ -1924,4 +1965,20 @@ screen and (min-width:64em) {
     }
 }
 
+.material-icons-outlined {
+    vertical-align: bottom;
+    padding-right: 4px;
+    padding-left: 16px
+}
 
+.material-icons-outlined.md-12 {
+    font-size: 12px;
+}
+
+.material-icons-outlined.md-14 {
+    font-size: 14px;
+}
+
+.material-icons-outlined.light {
+    color: #ccc;
+}
